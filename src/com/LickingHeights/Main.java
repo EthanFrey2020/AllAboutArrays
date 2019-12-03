@@ -13,7 +13,9 @@ public class Main {
 
         Pattern1();
         Pattern2();
-        
+        Pattern3();
+
+
 
     }
 
@@ -55,16 +57,33 @@ public class Main {
 
     }
 
-    public static void Pattern2(){
-        for (int rows = 1; rows <=6; rows++){
+    public static void Pattern2() {
+        for (int rows = 1; rows <= 6; rows++) {
 
-            for (int columns = 0; columns < 6; columns++){
+            for (int columns = 0; columns < 6; columns++) {
                 System.out.print(rows);
             }
 
             System.out.println();
 
         }
+    }
+        public static void Pattern3(){
+            for (int rows = 0; rows <6; rows++){
+
+                for (int columns = 1; columns <= 6; columns++){
+                    System.out.print(columns);
+                }
+
+                System.out.println();
+
+            }
+
+
+
+        }
+
+
 
 
 
@@ -75,4 +94,4 @@ public class Main {
 
 
 
-}
+

@@ -1,5 +1,7 @@
 package com.LickingHeights;
 
+import java.lang.reflect.Parameter;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -14,15 +16,16 @@ public class Main {
         printArray(array);
         System.out.println("The sum of the array is " + sum(array));
         System.out.println("The min of the array is " + min(array));
-        System.out.println("The max of the array is " +max(array));
-
-        Pattern1();
-        Pattern2();
-        Pattern3();
-        Pattern4();
-        Pattern5();
+        System.out.println("The max of the array is " + max(array));
+        System.out.println("After Bubble sort ");
+        printArray(bubbleSort(array));
 
 
+//        Pattern1();
+//        Pattern2();
+//        Pattern3();
+//        Pattern4();
+//        Pattern5();
 
     }
 
@@ -41,6 +44,7 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
+
     }
 
     public static int createRandomNumber(int lowestNumber, int highestNumber) {
@@ -59,8 +63,6 @@ public class Main {
 
         return sum;
     }
-
-
     public static int min(int[] array){
         int min = array[0];
         for (int i=0; i<array.length; i++){
@@ -68,15 +70,15 @@ public class Main {
         }
         return min;
     }
-
     public static int max(int[] array){
         int max = array[0];
-        for (int i=0; i > array.length; i++){
-            if (array[i]>max) max = array[i];
+        for (int i=1; i < array.length; i++){
+            if (array[i]>max) {
+                max = array[i];
+            }
         }
         return max;
     }
-
 
     public static void Pattern1(){
         for (int rows = 0; rows <6; rows++){
@@ -92,7 +94,6 @@ public class Main {
 
 
     }
-
     public static void Pattern2() {
         for (int rows = 1; rows <= 6; rows++) {
 
@@ -145,9 +146,27 @@ public class Main {
     }
 
 
+    public static int[] bubbleSort (int[] array){
 
+        for (int i=0; i<array.length-1; i++){
+
+            for (int j=i+1; j<array.length; j++){
+
+                if (array[i] > array[j]){
+
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+
+                }
+            }
+        }
+
+
+        return array;
 
     }
+}
 
 
 

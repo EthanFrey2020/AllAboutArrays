@@ -12,6 +12,13 @@ public class Main {
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
+        String[] Adjectives = {"Built", "Cocky", "Handsome", "Nasty"};
+        String[] Places = {"Gym", "Fenway Park", "Office", ""};
+        String[] People = {"Kevin Hart", "Dwayne Johnson", "Ronnie Dawson", "David Ortiz"};
+        String[] Verbs = {"driving", "working", "playing", "Talking"};
+        String[] Times = {"5 o'clock", "11:11", "4:44", "12:44"};
+        String[] Things = {"Lamborghini Aventador SVJ", "Baseball", "Stapler", "Shoe"};
+
 
         printArray(array);
         System.out.println("The sum of the array is " + sum(array));
@@ -161,11 +168,9 @@ public class Main {
                 }
             }
         }
-
-
         return array;
-
     }
+
 }
 
 

@@ -1,6 +1,7 @@
 package com.LickingHeights;
 
 import java.lang.reflect.Parameter;
+import java.util.Random;
 
 public class Main {
 
@@ -12,20 +13,20 @@ public class Main {
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
-        String[] Adjectives = {"Built", "Cocky", "Handsome", "Nasty"};
-        String[] Places = {"Gym", "Fenway Park", "Office", ""};
-        String[] People = {"Kevin Hart", "Dwayne Johnson", "Ronnie Dawson", "David Ortiz"};
-        String[] Verbs = {"driving", "working", "playing", "Talking"};
-        String[] Times = {"5 o'clock", "11:11", "4:44", "12:44"};
-        String[] Things = {"Lamborghini Aventador SVJ", "Baseball", "Stapler", "Shoe"};
+        String[]adjectives = {"Built", "Cocky", "Handsome", "Nasty"};
+        String[]places = {"Gym", "Fenway Park", "Office", "School"};
+        String[]people = {"Kevin Hart", "Dwayne Johnson", "Ronnie Dawson", "David Ortiz"};
+        String[]verbs = {"driving", "working", "playing", "Talking"};
+        String[]times = {"5 o'clock", "11:11", "4:44", "12:44"};
+        String[]things = {"Lamborghini Aventador SVJ", "Baseball", "Stapler", "Shoe"};
 
 
-        printArray(array);
-        System.out.println("The sum of the array is " + sum(array));
-        System.out.println("The min of the array is " + min(array));
-        System.out.println("The max of the array is " + max(array));
-        System.out.println("After Bubble sort ");
-        printArray(bubbleSort(array));
+//        printArray(array);
+//        System.out.println("The sum of the array is " + sum(array));
+//        System.out.println("The min of the array is " + min(array));
+//        System.out.println("The max of the array is " + max(array));
+//        System.out.println("After Bubble sort ");
+//        printArray(bubbleSort(array));
 
 
 //        Pattern1();
@@ -33,6 +34,7 @@ public class Main {
 //        Pattern3();
 //        Pattern4();
 //        Pattern5();
+
 
     }
 
@@ -59,7 +61,6 @@ public class Main {
         int number = (int) ((Math.random() * (highestNumber - lowestNumber + 1)) + lowestNumber);
         return number;
     }
-
 
     public static int sum(int[] array){
         int sum = 0;
@@ -169,6 +170,14 @@ public class Main {
             }
         }
         return array;
+    }
+    public static String randomword (String[] array){
+        Random random = new Random();
+        return array[random.nextInt(array.length)];
+    }
+    public static void sentenceGenerator(String[]people,String[]verbs,String[]places,String[]times,String[]adjectives,String[]things){
+        System.out.println("I was " +randomword(verbs)+ "down the" +randomword(places));
+        System.out.println("around " +randomword(times) + "with my best friend" +randomword(people));
     }
 
 }
